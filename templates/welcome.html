@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+</head>
+
+<body>
+    <h2>Welcome, {{ current_user.username }}!</h2>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+
+</html>
