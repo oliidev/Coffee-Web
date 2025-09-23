@@ -10,7 +10,7 @@ app.config['DEBUG'] = True
 
 #configure the app
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:\\Users\\742232\\DB.Browser.for.SQLite-v3.13.1-win64\\vsc.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:\\Users\\742232\\DB.Browser.for.SQLite-v3.13.1-win64\\coffee.db'
 app.config['SECRET_KEY'] = 'your-secret-key-here'  # change to your secret key
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
@@ -95,21 +95,19 @@ def login():
         if customer and bcrypt.check_password_hash(customer.password, password):
             login_user(customer)
             flash('Login successful!', 'success')
-            return redirect(url_for('welcome'))
+            return redirect(url_for('home'))
         else:
             flash('Login failed. Please check your username and password.', 'danger')
             return render_template('login.html')
     return render_template('login.html')
-@app.route('/welcome')
-@login_required
-def welcome():
-    return render_template('welcome.html')
+
 @app.route('/logout')
 @login_required
 def logout():
     logout_user()
     flash('You have been logged out.', 'info')
     return redirect(url_for('login'))
+
 @app.route('/')
 @login_required
 def home():
