@@ -1,6 +1,5 @@
-To-do:
+Bean and Brew Website
 
-Get logo 
-sort out database link with sqlite
+Things I used: HTML, CSS, JS, Python, SQLAlchemy, Flask
 
-Bean and Brew Coffee Shop
+- This project is for educational purposes only.
