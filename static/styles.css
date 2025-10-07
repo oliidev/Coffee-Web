@@ -1,0 +1,16 @@
+.navbar {
+    background-color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #dcdcdc;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    gap: 10rem;              /* spacing between logo and links */
+}
