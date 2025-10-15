@@ -84,11 +84,6 @@ def login():
         else:
             flash('Login failed. Please check your username and password.', 'danger')
     return render_template('login.html')
-
-@app.route('/welcome')
-@login_required
-def welcome():
-    return render_template('welcome.html')
     
 @app.route('/logout')
 @login_required

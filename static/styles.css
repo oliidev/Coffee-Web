@@ -12,5 +12,26 @@
 .navbar-container {
     display: flex;
     align-items: center;
-    gap: 10rem;              /* spacing between logo and links */
+    gap: 8rem;
+    justify-content: space-between;
+    width: 75%;
+}
+
+.nav-links {
+    display: flex;
+    gap: 4rem; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;         
+    font-family: arial, san-serif;
+  }
+  
+.nav-links li a:hover {
+  color: #7B4E3F;
 }
